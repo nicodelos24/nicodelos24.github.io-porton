@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../Curso HTML y CSS"
+		},
+		{
+			"path": "../Udemy contenido curso"
+		},
+		{
+			"path": "../JovaP2"
+		},
+		{
+			"path": "../Porton2"
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501,
+		"liveServer.settings.multiRootWorkspaceName": "Proyecto Portón"
+	}
+}

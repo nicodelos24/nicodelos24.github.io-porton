@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    svg path {
+      stroke-dasharray: 400;     /* longitud total del path */
+      stroke-dashoffset: 400;    /* inicia completamente oculto */
+      animation: dibujar s ease-out forwards;
+    }
+
+    @keyframes dibujar {
+      to {
+        stroke-dashoffset: 0;    /* termina completamente visible */
+      }
+    }
+  </style>
+</head>
+<body>
+  <svg width="200" height="100" viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80"
+          stroke="black"
+          stroke-width="2"
+          fill="transparent"/>
+  </svg>
+</body>
+</html>

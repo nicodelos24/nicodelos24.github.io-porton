@@ -1,0 +1,16 @@
+body {
+    background-color: antiquewhite;
+}
+h1{
+    text-align: center;
+}
+.cabecera {
+    background-image: url(img/el_otro_porton_sin_fondo.png);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position:center 45.5%;
+    
+    background-color:#ffc;
+    width: auto;
+    height: 250px;
+}

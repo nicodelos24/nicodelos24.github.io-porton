@@ -1,0 +1,147 @@
+ /* Reset básico */
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     color: #333;
+ }
+
+ /* Navbar fija */
+ nav {
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     background: rgba(255, 255, 255, 0.95);
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+     padding: 10px 20px;
+     z-index: 1000;
+     display: flex;
+     justify-content: center;
+     gap: 30px;
+ }
+
+ nav a {
+     text-decoration: none;
+     color: #333;
+     font-weight: 600;
+     transition: color 0.3s ease;
+ }
+
+ nav a:hover {
+     color: #b94e48;
+     /* color acento */
+ }
+
+ /* Hero image */
+ .hero {
+     height: 80vh;
+     background: url('img/494312950_1241191088007039_1262098593570920736_n.jpg') center center/cover no-repeat;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     color: white;
+     padding: 0 20px;
+ }
+
+ .hero h1 {
+     font-size: 3rem;
+     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+ }
+
+ /* Botón animado */
+ .btn {
+     margin-top: 20px;
+     padding: 15px 30px;
+     background-color: #b94e48;
+     border: none;
+     color: white;
+     font-weight: 700;
+     cursor: pointer;
+     border-radius: 5px;
+     font-size: 1.2rem;
+     transition: background-color 0.3s ease, transform 0.3s ease;
+ }
+
+ .btn:hover {
+     background-color: #7a322b;
+     transform: scale(1.05);
+ }
+
+ /* Contenido debajo */
+ main {
+     max-width: 900px;
+     margin: 40px auto;
+     padding: 0 20px;
+ }
+
+ main h2 {
+     font-size: 2rem;
+     margin-bottom: 10px;
+ }
+
+ main p {
+     line-height: 1.6;
+     margin-bottom: 20px;
+ }
+
+ /* Para que el contenido no quede tapado por el nav */
+ body {
+     padding-top: 60px;
+ }
+
+ /* Responsive */
+ @media (max-width: 600px) {
+     .hero h1 {
+         font-size: 2rem;
+     }
+
+     nav {
+         gap: 15px;
+         padding: 10px;
+     }
+
+     .btn {
+         padding: 12px 24px;
+         font-size: 1rem;
+     }
+
+     /* Animación para el botón */
+     @keyframes brillo {
+
+         0%,
+         100% {
+             box-shadow: 0 0 5px #b94e48;
+         }
+
+         50% {
+             box-shadow: 0 0 20px #b94e48;
+         }
+     }
+
+     .btn:hover {
+         animation: brillo 1.5s infinite alternate;
+     }
+
+     /* Animación fade-in para el título */
+     @keyframes fadeIn {
+         from {
+             opacity: 0;
+             transform: translateY(20px);
+         }
+
+         to {
+             opacity: 1;
+             transform: translateY(0);
+         }
+     }
+
+     .hero h1 {
+         animation: fadeIn 2s ease forwards;
+     }
+ }
